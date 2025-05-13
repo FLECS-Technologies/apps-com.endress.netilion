@@ -1,10 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/FLECS-Technologies/app-sdk/main/manifest.schema.json",
     "_schemaVersion": "2.0.0",
-    "app": "",
+    "app": "com.endress.netilion",
     "version": "##VERSION##",
     "revision": "0",
-    "image": "flecs.azurecr.io/",
+    "image": "flecs.azurecr.io/com.endress.netilion",
     "multiInstance": false,
     "editor": "",
     "args": [
