@@ -6,32 +6,17 @@
     "revision": "0",
     "image": "flecs.azurecr.io/com.endress.netilion",
     "multiInstance": false,
-    "editor": "",
-    "args": [
-        "--launch-arg-1",
-        "--launch-arg-2=8000"
-    ],
-    "capabilities": [],
-    "conffiles": [
-        "default.conf:/etc/my-app/default.conf",
-        "default.conf:/etc/my-app/default.conf:ro",
-        "default.conf:/etc/my-app/default.conf:rw"
-    ],
-    "devices": [
-        "/dev/net/tun"
-    ],
     "env": [
-        "MY_ENV=value"
-    ],
-    "ports": [
-        "12345:12345"
+        "OI4_EDGE_EVENT_LEVEL=critical",
+        "OI4_EDGE_LOG_LEVEL=informational",
+        "TZ=${TZ}"
     ],
     "volumes": [
-        "my-app-etc:/etc/my-app",
-        "/var/lib/my-app:/var/lib/my-app"
-    ],
-    "labels": [
-        "org.my.label",
-        "org.my.label-with-value=Some custom label value"
+        "/etc/oi4/mqtt:/etc/oi4/mqtt",
+        "/etc/oi4/certs:/etc/oi4/certs",
+        "/run/secrets:/run/secrets",
+        "/etc/oi4/config:/etc/oi4/config",
+        "/etc/oi4/app:/etc/oi4/app",
+        "/opt/oi4/app:/opt/oi4/app"
     ]
 }
